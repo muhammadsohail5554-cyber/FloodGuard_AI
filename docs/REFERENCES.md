@@ -1,0 +1,15 @@
+# References and source review
+
+All pages accessed **24 November 2026**. These are source notes, not copied article text. Numerical project results come from the included implementation.
+
+1. **Umer, A. (2026).** A Multi-Resolution Geospatial Dataset of Monsoon Flood Extent and Spatial Clustering for Pakistan (2022–2025), version 1. Zenodo. https://doi.org/10.5281/zenodo.20100773. Primary dataset; district and tehsil tables; CC BY 4.0. Supports the four-season exposure task, while providing only limited temporal history.
+2. **World Bank (2022, October 28).** Pakistan: Flood Damages and Economic Losses Over USD 30 billion and Reconstruction Needs Over USD 16 billion – New Assessment. https://www.worldbank.org/en/news/press-release/2022/10/28/pakistan-flood-damages-and-economic-losses-over-usd-30-billion-and-reconstruction-needs-over-usd-16-billion-new-assessme. Establishes the disaster-preparedness context; it does not validate this model or provide its training labels.
+3. **FAO (2025, December 29).** New crop type and flood extent data for Pakistan. https://www.fao.org/agroinformatics/training-and-resources/data-sets/data-set-detail/new-crop-type-and-flood-extent-data-for-pakistan/en. Describes high-resolution crop and inundation products for KP, Punjab and Sindh; useful future independent validation or enrichment, not used in the implemented model.
+4. **Pietrostefani, E., Pardy, M., Mason, M., Nasuto, A., & Rowe, F. (2026).** FloodTraces Hackathon Datasets, version 2. Zenodo. https://zenodo.org/records/20828435. Contextual population, displacement and climate sources. The record is restricted; no restricted files were downloaded or redistributed. Geographic alignment and access permissions would need separate work.
+5. **scikit-learn developers.** Common pitfalls and recommended practices. https://scikit-learn.org/stable/common_pitfalls.html. Supports training-only preprocessing, pipelines and separation of training from evaluation. Documentation accessed online may describe a newer release than the pinned implementation (1.8.0).
+6. **scikit-learn developers.** Metrics and scoring: quantifying the quality of predictions. https://scikit-learn.org/stable/modules/model_evaluation.html. Supports the choice and interpretation of MAE, MSE, RMSE and R². MAE in this project is measured in percentage points, not classification accuracy.
+7. **Umer, A. (2026).** Variable_Dictionary.csv, accompanying [1]. https://zenodo.org/records/20100773/files/Variable_Dictionary.csv. Defines area and flood percentages, spatial statistics and detection limitations. Original file is bundled and should be read as Windows-1252.
+
+## Gap addressed
+
+The selected source provides retrospective exposure and spatial statistics. This project tests a narrower question: how well can previous-year exposure and simple geographic metadata estimate a held-out season for already observed districts? It does not reconstruct satellite imagery or claim to replace hydrological forecasts. The literature motivates the problem and methodology, while the included experiments supply the evidence for the project's conclusion.

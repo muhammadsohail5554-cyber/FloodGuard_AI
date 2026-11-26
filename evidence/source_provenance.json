@@ -1,0 +1,39 @@
+{
+  "creator": "Abdullah Umer",
+  "title": "A Multi-Resolution Geospatial Dataset of Monsoon Flood Extent and Spatial Clustering for Pakistan (2022\u20132025)",
+  "doi": "10.5281/zenodo.20100773",
+  "version": "1",
+  "license": "CC BY 4.0",
+  "access_date": "2026-11-24",
+  "district_origin": "User-provided file, verified against publisher checksum",
+  "comparison_and_dictionary_origin": "Downloaded from publisher",
+  "files": [
+    {
+      "file": "District_Level_Data.csv",
+      "bytes": 125670,
+      "md5": "a9d498bdbfbeef2350b43ce2e47c4d58",
+      "published_md5": "a9d498bdbfbeef2350b43ce2e47c4d58",
+      "matches_publisher": true,
+      "sha256": "3d666f5d89fcc07d740bfedfbcdef9071208808d4e74e575b7222c4cc488451b",
+      "url": "https://zenodo.org/records/20100773/files/District_Level_Data.csv"
+    },
+    {
+      "file": "Tehsil_Level_Data.csv",
+      "bytes": 271788,
+      "md5": "a27591f747c81ab52297af988282fd46",
+      "published_md5": "a27591f747c81ab52297af988282fd46",
+      "matches_publisher": true,
+      "sha256": "d3495853bc275c38c9e1a2f365ca526178653b191e30e0d7f29b945a3d2b98f6",
+      "url": "https://zenodo.org/records/20100773/files/Tehsil_Level_Data.csv"
+    },
+    {
+      "file": "Variable_Dictionary.csv",
+      "bytes": 2111,
+      "md5": "0bb1214925aacb6600a81c9a4a230891",
+      "published_md5": "0bb1214925aacb6600a81c9a4a230891",
+      "matches_publisher": true,
+      "sha256": "b88ae74fd1e2c52bfe05390299fe8998441e59b4748f97dcff1d085586c129e2",
+      "url": "https://zenodo.org/records/20100773/files/Variable_Dictionary.csv"
+    }
+  ]
+}

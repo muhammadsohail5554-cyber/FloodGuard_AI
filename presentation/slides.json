@@ -1,0 +1,91 @@
+[
+  {
+    "title": "FloodGuard AI",
+    "body": [
+      "Next-season district flood-exposure estimation",
+      "M.Sohail 16032  |  M.Umar 16031",
+      "CUSIT · Programming for Artificial Intelligence · Fall 2026"
+    ],
+    "note": "Sohail, 30 seconds. Introduce the historical evaluation and say clearly that it is not a live warning system."
+  },
+  {
+    "title": "Problem and proposed stakeholder",
+    "body": [
+      "District preparedness analysts need evidence about historical exposure.",
+      "Predict the next season’s flooded area percentage for known districts.",
+      "Targets: MAE ≤ 5 points and ≥ 10% improvement over persistence.",
+      "These are classroom targets, not operational acceptance criteria."
+    ],
+    "note": "Sohail, 50 seconds. Context: World Bank 2022 PDNA, reference 2. No stakeholder interview or approval is claimed."
+  },
+  {
+    "title": "Dataset and audit",
+    "body": [
+      "640 records · 160 districts · four seasons (2022–2025)",
+      "District table selected; 2,308-row tehsil alternative compared.",
+      "No missing cells or duplicate district-year keys.",
+      "Public Zenodo source; CC BY 4.0; publisher checksums verified."
+    ],
+    "note": "Sohail, 60 seconds. Sources 1 and 7 in REFERENCES.md. Explain why more tehsil rows do not add seasons."
+  },
+  {
+    "title": "Exploratory analysis",
+    "body": [
+      "Many low percentages and a long upper tail.",
+      "Seasonal and regional differences favour temporal evaluation.",
+      "Four EDA figures use 2022–2024 only."
+    ],
+    "figure": "01_distribution.png",
+    "note": "Sohail, 50 seconds. Explain skew and why a median benchmark matters. All plotted values are computed from bundled source data."
+  },
+  {
+    "title": "Features and evaluation design",
+    "body": [
+      "Inputs: prior-season percentage, district area and province.",
+      "Exclude current-season flood measurements and spatial statistics.",
+      "Fit 2023 → select on 2024 → refit 2023–2024 → test 2025.",
+      "Same districts across years; unseen districts are not tested."
+    ],
+    "note": "Umar, 60 seconds. Explain the exact lag join and training-only preprocessing. Sources 5 and 6; full method in pipeline.py."
+  },
+  {
+    "title": "Three experiments",
+    "body": [
+      "E1: Ridge, prior-season percentage only.",
+      "E2: Ridge, add area and one-hot province.",
+      "E3: Random Forest, same expanded features.",
+      "2024 MAE: 4.020 / 4.096 / 4.006; forest selected."
+    ],
+    "note": "Umar, 45 seconds. Forest wins by a tiny margin. Selection metric was fixed; no claim of statistically significant superiority."
+  },
+  {
+    "title": "Final holdout results",
+    "body": [
+      "Forest: MAE 2.726 points · RMSE 6.016 · R² −0.978.",
+      "Persistence MAE: 4.388; training-median MAE: 2.474.",
+      "Beating persistence does not establish useful forecasting skill."
+    ],
+    "figure": "06_test_mae.png",
+    "note": "Umar, 60 seconds. Show all results, including the stronger median benchmark. Do not call MAE an accuracy percentage."
+  },
+  {
+    "title": "Working demo and reliability",
+    "body": [
+      "python demo.py --district PK101 --year 2025",
+      "Display a real held-out prediction alongside the observation.",
+      "12 tests passed; nine notebook code cells executed.",
+      "Four seasons and uneven regional errors limit generalisation."
+    ],
+    "note": "Umar, 90 seconds including demo. Use demo.py offline. Then show PK707 to demonstrate a large error rather than hiding it."
+  },
+  {
+    "title": "Recommendation and team follow-through",
+    "body": [
+      "Keep the workflow as an auditable research baseline.",
+      "Add earlier seasons and weather/river predictors; validate again.",
+      "Sohail: proposed data/EDA review. Umar: proposed model/test review.",
+      "Actual contributions, team-size resolution and Git evidence remain pending."
+    ],
+    "note": "Both, 45 seconds. No operational use. Source references and full attribution are in the accompanying report. Mention AI assistance and that proposed roles are not completed contributions."
+  }
+]

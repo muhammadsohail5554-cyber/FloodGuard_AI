@@ -1,0 +1,22 @@
+{
+  "selected_model": "E3_Random_forest",
+  "selection_rule": "2024 validation MAE, E1-E3 only",
+  "train_rows": 160,
+  "validation_rows": 160,
+  "refit_rows": 320,
+  "test_rows": 160,
+  "test_metrics": {
+    "mae": 2.7261614803225735,
+    "mse": 36.19332289327143,
+    "rmse": 6.016088670662312,
+    "r2": -0.9784105960271336
+  },
+  "improvement_vs_persistence_pct": 37.875400199698376,
+  "success_1_mae_le_5": true,
+  "success_2_10pct_better_than_persistence": true,
+  "python": "3.12.14",
+  "sklearn": "1.8.0",
+  "pandas": "2.2.3",
+  "numpy": "2.3.5",
+  "geographic_scope": "Future seasons for the same 160 districts; not unseen-district validation"
+}

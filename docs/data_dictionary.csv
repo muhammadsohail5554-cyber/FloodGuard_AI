@@ -1,0 +1,15 @@
+variable,type_and_units,meaning,model_role
+district_code,String / identifier,OCHA administrative code,Join/report only
+district_name,String / label,Administrative district name,Report only
+province_name,String / category,Province or territory name,One-hot predictor
+area_km2,Numeric / km²,Administrative area,Numeric predictor
+flooded_km2,Numeric / km²,Detected flooded area in this season,Excluded: outcome-derived
+pct_flooded,Numeric / %,"min(100, 100 × flooded_km2 / area_km2)",Target only
+year,Integer / calendar year,Season represented by observation,Temporal split/join only
+gi_z,Numeric / z-score,Getis-Ord Gi* statistic on flood percentage,Excluded: same-year spatial statistic
+hotspot,String / category,Gi* significance/hotspot class,Excluded: same-year spatial statistic
+lisa_quad,String / category,Local spatial association quadrant,Excluded: same-year spatial statistic
+lisa_p,Numeric / p-value,Local Moran significance value,Excluded: same-year spatial statistic
+z_val,Numeric / standard score,Standardised flooded percentage,Excluded: transformed target
+z_lag,Numeric / spatial lag,Spatial lag of standardised target,Excluded: same-year target neighbours
+prev_pct_flooded,Numeric / % (derived),Same district pct_flooded at exactly t-1,Lagged predictor

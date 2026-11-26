@@ -1,0 +1,11 @@
+Package validation — 24 November 2026
+
+ZIP extracted into a fresh folder.
+python -m src.pipeline: passed; all deterministic run-summary fields match original.
+python -m unittest discover -s tests -v: 12 tests passed.
+python demo.py --district PK707 --year 2025: passed.
+Notebook: valid nbformat 4; 9 executed code cells; 21 stored outputs; zero error outputs.
+PDF page counts: report 11 (10 body + references), proposal 2, audit 3, slides 9.
+All PDF text fits page bounds; rendered pages visually reviewed.
+Raw checksums match publisher; archive CRC integrity checked.
+Jupyter native kernel transport could not run in this environment; notebook executed through real in-process IPython.

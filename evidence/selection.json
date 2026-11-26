@@ -1,0 +1,5 @@
+{
+  "selected": "E3_Random_forest",
+  "rule": "Lowest 2024 validation MAE among E1-E3; no test tuning",
+  "seed": 42
+}

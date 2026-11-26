@@ -1,0 +1,3 @@
+Bagh (PK101), 2025 historical holdout
+Predicted flooded area: 0.184% | Observed: 0.000%
+Academic demonstration only; this is not a live forecast or evacuation recommendation.

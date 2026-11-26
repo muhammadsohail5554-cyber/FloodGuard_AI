@@ -1,0 +1,70 @@
+{
+  "rows": 640,
+  "columns": 13,
+  "districts": 160,
+  "years": [
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "missing": {
+    "district_code": 0,
+    "district_name": 0,
+    "province_name": 0,
+    "area_km2": 0,
+    "flooded_km2": 0,
+    "pct_flooded": 0,
+    "year": 0,
+    "gi_z": 0,
+    "hotspot": 0,
+    "lisa_quad": 0,
+    "lisa_p": 0,
+    "z_val": 0,
+    "z_lag": 0
+  },
+  "duplicates": 0,
+  "duplicate_keys": 0,
+  "zero_target_count": 104,
+  "year_summary": [
+    {
+      "year": 2022,
+      "count": 160,
+      "mean": 13.279832,
+      "median": 1.657916,
+      "max": 98.725922
+    },
+    {
+      "year": 2023,
+      "count": 160,
+      "mean": 4.897276,
+      "median": 0.445331,
+      "max": 72.47023
+    },
+    {
+      "year": 2024,
+      "count": 160,
+      "mean": 5.667129,
+      "median": 0.821532,
+      "max": 69.6901
+    },
+    {
+      "year": 2025,
+      "count": 160,
+      "mean": 2.479137,
+      "median": 0.285858,
+      "max": 19.116478
+    }
+  ],
+  "province_counts": {
+    "Punjab": 36,
+    "Khyber Pakhtunkhwa": 35,
+    "Balochistan": 35,
+    "Sindh": 29,
+    "Gilgit Baltistan": 14,
+    "Azad Kashmir": 10,
+    "Islamabad": 1
+  },
+  "raw_md5": "a9d498bdbfbeef2350b43ce2e47c4d58",
+  "raw_sha256": "3d666f5d89fcc07d740bfedfbcdef9071208808d4e74e575b7222c4cc488451b"
+}
